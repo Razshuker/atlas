@@ -1,0 +1,172 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-image: url(image/bg.jpg);
+    background-position:center;
+    background-size: cover;
+    background-attachment: fixed;
+    text-shadow: #e0e0e0 1px 1px 0, 4px 6px 8px rgba(255,255,255,0.74);
+}
+.background{
+    background-color: rgba(138, 138, 138, 0.5);
+}
+.load-icon{
+    width: 400px;
+}
+header{
+    background-color: rgba(0, 0, 0);
+    color: rgb(255, 255, 255);
+    text-shadow:none;
+}
+header .logo .icon{
+    font-size: 3.5em;
+    color: white;
+    transition: 800ms;
+}
+header .logo .icon:hover{
+    transform: rotateX(180deg);
+    color: rgb(122, 139, 104);
+}
+header .row{
+    min-height: 75px;
+    display: flex;
+    align-items: center;
+}
+header nav ul{
+    display: flex;
+}
+header nav ul li{
+    padding: 0 8px;
+    border-right: 1px solid rgb(175, 173, 170);
+}
+header nav ul li:last-of-type{
+    border-right: none;
+}
+header nav ul li a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    display: block;
+    transition: 800ms;
+}
+header nav ul li a:hover{
+    color: rgb(175, 173, 170);
+    transform: scale(0.9);
+}
+header .search .form-control{
+    display: inline;
+    width: 65%;
+}
+header .search button{
+    border: none;
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    font-size: 1.25em;
+}
+header .burger{
+    font-size: 2em;
+    margin-right: 24px;
+}
+header #close_btn{
+    cursor: pointer;
+    position: absolute;
+    top: -8px;
+    display: flex;
+    justify-content: end;
+    right: 16px;
+    font-size: 2em;
+}
+
+main{
+    min-height: 100vh;
+}
+main .country-map{
+    min-height: 85vh;
+    border-radius: 12px;
+    padding: 16px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+main .country-map iframe{
+    width: 100%;
+    min-height: 70vh;
+    border-radius: 12px;
+
+}
+
+main .country-map .border-list{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 8px 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    justify-content: center;
+}
+main .country-map li{
+    padding: 0 12px;
+    border-right: 1px solid rgb(0, 0, 0);
+}
+main .country-map li:last-of-type{
+    border-right: none;
+}
+main .country-map a{
+    color: black;
+    display: block;
+    text-decoration: none;
+    transition: 800ms;
+}
+main .country-map a:hover{
+    transform: scale(1.15);
+}
+main .country-info{
+    border-radius: 12px;
+    padding: 16px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+main .country-info img{
+    border-radius: 12px;
+}
+
+footer{
+    background-color: rgba(0, 0, 0);
+    color: rgb(255, 255, 255);
+    text-shadow:none;
+    padding: 8px;
+    font-size: 1.5em;
+}
+
+@media (max-width:991px){
+    header .row{
+        justify-content: center;
+        padding: 16px;
+        max-width: 70vw;
+        min-height: 200vh;
+        display: none;
+        width: 100%;
+        padding-top: 64px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: rgba(0,0,0, 0.7);
+        font-size: 1.5em;
+        text-align: center;
+        z-index: 999999;
+    }
+    header nav{
+        position: absolute;
+        top: 150px;
+    }
+    header nav ul{
+        display: block;
+    }
+    header .row nav ul li{
+        border-right: none;
+        padding: 24px 0;
+    }
+    header .search{
+        position: absolute;
+        top: 60px;
+    }
+}
