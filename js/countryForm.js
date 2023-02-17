@@ -6,13 +6,21 @@ export const searchCountry = () => {
 
     input.addEventListener("keydown", (e) => {
         if (e.key == "Enter") {
-            window.location.href = `?country=${input.value}`;
-            getQuery();
+            if (input.value != "") {
+                window.location.href = `?country=${input.value}`;
+                getQuery();
+            } else {
+                alert("enter country to search");
+            }
         }
     })
 
     btn.addEventListener("click", () => {
-        window.location.href = `?country=${input.value}`;
-        getQuery();
+        if (input.value != "") {
+            window.location.href = `?country=${input.value}`;
+            getQuery();
+        } else {
+            alert("enter country to search");
+        }
     })
 }
