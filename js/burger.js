@@ -10,15 +10,16 @@ function declareBtns() {
   </div>`;
   burger_btn.addEventListener("click", function () {
     nav_open.style.display = "flex";
+    nav_open.classList.toggle('menu-open');
     burger_btn.style.display = "none";
-    nav_open.classList.toggle('visible');
+    // nav_open.classList.toggle('visible');
 
   })
   let close_light_btn = document.querySelector("#close_btn");
   close_light_btn.addEventListener("click", function () {
     nav_open.style.display = "none";
     burger_btn.style.display = "block";
-    nav_open.classList.toggle('visible');
+    // nav_open.classList.toggle('visible');
 
 
   })
